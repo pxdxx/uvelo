@@ -1,0 +1,44 @@
+{
+  "name": "uvelo",
+  "productName": "Uvelo",
+  "version": "0.1.0",
+  "description": "Uvelo: открытый VPN-клиент для Windows на базе sing-box и Xray",
+  "main": "./out/main/index.js",
+  "license": "GPL-3.0",
+  "author": "pxdxx",
+  "homepage": "https://github.com/pxdxx/uvelo",
+  "scripts": {
+    "fetch-cores": "node scripts/fetch-cores.mjs",
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "preview": "electron-vite preview",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "dist": "electron-vite build && electron-builder --win --x64"
+  },
+  "dependencies": {
+    "@fontsource-variable/manrope": "^5.3.0",
+    "countries-and-timezones": "^3.11.0",
+    "d3-geo": "^3.1.2",
+    "flag-icons": "^7.6.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "simple-icons": "^16.38.0",
+    "topojson-client": "^3.1.0",
+    "undici": "^8.12.4",
+    "world-atlas": "^2.0.2",
+    "world-countries": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/d3-geo": "^3.1.1",
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@types/topojson-client": "^3.1.5",
+    "@vitejs/plugin-react": "^6.3.0",
+    "electron": "^45.3.3",
+    "electron-builder": "^26.18.0",
+    "electron-vite": "^6.0.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.8"
+  }
+}

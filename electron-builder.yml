@@ -1,0 +1,31 @@
+appId: org.uvelo.client
+productName: Uvelo
+directories:
+  buildResources: build
+  output: dist
+files:
+  - out/**/*
+  - package.json
+asarUnpack:
+  - resources/**
+extraResources:
+  - from: resources/cores
+    to: cores
+  - from: resources/icon.png
+    to: icon.png
+win:
+  target:
+    - target: nsis
+      arch: [x64]
+  icon: build/icon.png
+  executableName: Uvelo
+  requestedExecutionLevel: requireAdministrator
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  shortcutName: Uvelo
+  artifactName: Uvelo-Setup.${ext}
+protocols:
+  - name: Uvelo
+    schemes: [uvelo]
